@@ -18,7 +18,7 @@ document.getElementById('add').appendChild(new_ele);
 else 
 {
 var new_ele = document.createElement('p');
-new_ele.textContext = rejson.identityProvider;
+new_ele.innerHTML = rejson.identityProvider;
 var new_ele2 = document.createElement('p');
 new_ele2.textContext = rejson.userId;
 var new_ele3 = document.createElement('p');
@@ -29,7 +29,7 @@ document.getElementById('add').appendChild(new_ele);
 document.getElementById('add').appendChild(new_ele2);
 document.getElementById('add').appendChild(new_ele3);
 document.getElementById('add').appendChild(new_ele4);
-
+Console.log(rejson);
 }
 
 }
