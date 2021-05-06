@@ -12,7 +12,7 @@ async function get() {
 var rejson = await getUserInfo();
 if (rejson.clientPrincipal == "null") {
 var new_ele = document.createElement("p");
-new_ele.textContext = '認証されてません';
+new_ele.innerHTML = '認証されてません';
 document.getElementById('add').appendChild(new_ele);
 }
 else 
@@ -20,11 +20,11 @@ else
 var new_ele = document.createElement('p');
 new_ele.innerHTML = rejson.identityProvider;
 var new_ele2 = document.createElement('p');
-new_ele2.textContext = rejson.userId;
+new_ele2.innerHTML = rejson.userId;
 var new_ele3 = document.createElement('p');
-new_ele3.textContext = rejson.userDetails;
+new_ele3.innerHTML = rejson.userDetails;
 var new_ele4 = document.createElement('p');
-new_ele4.textContext = rejson.userRoles;
+new_ele4.innerHTML = rejson.userRoles;
 document.getElementById('add').appendChild(new_ele);
 document.getElementById('add').appendChild(new_ele2);
 document.getElementById('add').appendChild(new_ele3);
