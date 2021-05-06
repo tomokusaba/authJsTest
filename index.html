@@ -19,18 +19,18 @@ async function getUserInfo() {
 <script>
 var rejson = getUserInfo();
 if (rejson.clientPrincipal == null) {
-var new_ele.textContext = document.createElement('p');
+var new_ele = document.createElement("p");
 new_ele.textContext = '認証されてません';
 }
 else 
 {
-var new_ele.textContext = document.createElement('p');
+var new_ele = document.createElement('p');
 new_ele.textContext = rejson.identityProvider;
-var new_ele2.textContext = document.createElement('p');
+var new_ele2 = document.createElement('p');
 new_ele2.textContext = rejson.userId;
-var new_ele3.textContext = document.createElement('p');
+var new_ele3 = document.createElement('p');
 new_ele3.textContext = rejson.userDetails;
-var new_ele4.textContext = document.createElement('p');
+var new_ele4 = document.createElement('p');
 new_ele4.textContext = rejson.userRoles[0];
 }
 
