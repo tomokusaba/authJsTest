@@ -8,17 +8,8 @@ async function getUserInfo() {
   const { clientPrincipal } = payload;
   return clientPrincipal;
 }
-</script>
-</head>
-<body>
-<a href="/.auth/login/aad">AAD Login</a><br />
-<a href="/.auth/login/facebook">facebook Login</a><br />
-<a href="/.auth/login/github">github Login</a><br />
-<a href="/.auth/login/google">google Login</a><br />
-<a href="/.auth/login/twitter">twitter Login</a><br />
-<div id="add"></div>
-<script>
-var rejson = getUserInfo().then(rejson => {console.log(rejson); return rejson;});
+async function get() {
+var rejson = await getUserInfo();
 if (rejson.clientPrincipal == "null") {
 var new_ele = document.createElement("p");
 new_ele.textContext = '認証されてません';
@@ -41,6 +32,19 @@ document.getElementById('add').appendChild(new_ele4);
 
 }
 
+}
+
+</script>
+</head>
+<body>
+<a href="/.auth/login/aad">AAD Login</a><br />
+<a href="/.auth/login/facebook">facebook Login</a><br />
+<a href="/.auth/login/github">github Login</a><br />
+<a href="/.auth/login/google">google Login</a><br />
+<a href="/.auth/login/twitter">twitter Login</a><br />
+<div id="add"></div>
+<script>
+get();
 </script>
 </body>
 </html>
