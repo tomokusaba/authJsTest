@@ -17,7 +17,7 @@ async function getUserInfo() {
 <a href="/.auth/login/google">google Login</a><br />
 <a href="/.auth/login/twitter">twitter Login</a><br />
 <script>
-var rejson = getUserInfo();
+var rejson = getUserInfo().then(rejson => {console.log(rejson); return rejson;});
 if (rejson.clientPrincipal == null) {
 var new_ele = document.createElement("p");
 new_ele.textContext = '認証されてません';
