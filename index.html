@@ -1,0 +1,39 @@
+<html>
+<head>
+<title>AuthJavascriptTest</title>
+<script>
+async function getUserInfo() {
+  const response = await fetch('/.auth/me');
+  const payload = await response.json();
+  const { clientPrincipal } = payload;
+  return clientPrincipal;
+}
+</script>
+</head>
+<body>
+<a href="/.auth/login/aad">AAD Login</a><br />
+<a href="/.auth/login/facebook">facebook Login</a><br />
+<a href="/.auth/login/github">github Login</a><br />
+<a href="/.auth/login/google">google Login</a><br />
+<a href="/.auth/login/twitter">twitter Login</a><br />
+<script>
+var rejson = getUserInfo();
+if (rejson.clientPrincipal == null) {
+var new_ele.textContext = document.createElement('p');
+new_ele.textContext = 'îFèÿÇ≥ÇÍÇƒÇ‹ÇπÇÒ';
+}
+else 
+{
+var new_ele.textContext = document.createElement('p');
+new_ele.textContext = rejson.identityProvider;
+var new_ele2.textContext = document.createElement('p');
+new_ele2.textContext = rejson.userId;
+var new_ele3.textContext = document.createElement('p');
+new_ele3.textContext = rejson.userDetails;
+var new_ele4.textContext = document.createElement('p');
+new_ele4.textContext = rejson.userRoles[0];
+}
+
+</script>
+</body>
+</html>
